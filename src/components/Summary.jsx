@@ -4,7 +4,7 @@ import { database } from '../constants/sample'
 
 const Summary = () => {
 
-  const [totalPrice, setTotalPrice] = useState(0)
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     let sum = 0;
@@ -16,7 +16,12 @@ const Summary = () => {
       })
     })
     setTotalPrice(sum)
-  },[])
+  },[]);
+
+  const priceOptions = {
+    'style': 'currency',
+    'currency': 'PHP'
+  };
 
   return (
     <div className='w-full lg:w-1/3 '>
@@ -34,7 +39,7 @@ const Summary = () => {
                     {item.name}
                     </p>
                   </td>
-                  <td className='py-6 px-3'>{item.price}</td>
+                  <td className='py-6 px-3'>{parseFloat(item.price).toLocaleString('en-us', priceOptions)}</td>
                 </tr>
               ) : (
                 null
@@ -43,7 +48,7 @@ const Summary = () => {
           ))}
           <tr className='border-t-2'>
             <td className='py-6 px-3 '>Total:</td>
-            <td className='py-6 px-3'>{totalPrice}</td>
+            <td className='py-6 px-3'>{totalPrice.toLocaleString('en-us', priceOptions)}</td>
           </tr>
         </tbody>
       </table>
