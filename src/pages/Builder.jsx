@@ -10,11 +10,11 @@ const Builder = () => {
   return (
     <div className='container grid gap-3'>
       <div className='bg-white grid gap-3'>
-        <div className='flex flex-col gap-3 lg:flex-row lg:items-end'>
         <CopyLink/>
+        <div className='flex flex-col gap-3 lg:flex-row lg:items-end'>
         <Wattage/>
-        </div>
         <Compatibility/>
+        </div>
       </div>
       <div className='flex flex-col gap-12 lg:flex-row '>
       <Table/>

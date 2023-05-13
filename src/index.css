@@ -28,6 +28,12 @@
   @apply py-5 px-10 md:py-4 md:px-8;
 }
 
+.text-icon{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
 .fluid-h1{
   font-size: clamp(4rem, 1.5rem + 8vw, 6rem);
   line-height: 1.1;

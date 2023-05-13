@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faBars, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import logoLight from '../assets/logoLight.svg'
